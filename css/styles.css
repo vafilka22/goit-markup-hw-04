@@ -190,11 +190,20 @@ ul {
 }
 .basic-item {
   max-width: 270px;
+
+  border-radius: 4px;
 }
 .basic-item:not(:last-child) {
   margin-right: 30px;
 }
-
+.basic-icon {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+}
 .basic-title {
   font-weight: 700;
   font-size: 14px;
@@ -315,6 +324,52 @@ ul {
 .caption-soc-link:hover .caption-soc-icon,
 .caption-soc-link:focus .caption-soc-icon {
   fill: #ffffff;
+}
+
+/* Постійні клієнти */
+
+.client {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.7;
+  color: var(--title-text-color);
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+.regular-customers-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 94px;
+}
+.regular-customers-item {
+  width: 170px;
+  height: 92px;
+  margin-left: 30px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.regular-customers-item:first-child {
+  margin-left: 0px;
+}
+.regular-customers-icon {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  margin-bottom: 30px;
+  fill: #afb1b8;
+}
+
+.regular-customers-link:hover .regular-customers-icon,
+.regular-customers-link:focus .regular-customers-icon {
+  fill: #2196f3;
+}
+
+.regular-customers-link:hover .regular-customers-item,
+.regular-customers-link:focus .regular-customers-item {
+  fill: #2196f3;
 }
 .footer {
   background: #2f303a;
