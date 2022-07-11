@@ -70,13 +70,38 @@ ul {
 .site-nav .link:focus {
   color: var(--accent-color);
 }
-.adres .link:hover,
-.adres .link:focus .c {
-  color: var(--accent-color);
+
+.adres {
+  display: flex;
+  margin-left: auto;
+  color: var(--primary-text-color);
+}
+
+.adres-icon {
+  display: flex;
+}
+
+.adres .link {
+  color: inherit;
 }
 
 .contacts {
   display: flex;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.contact:hover,
+.contact:focus {
+  fill: #2196f3;
+  color: var(--accent-color);
+}
+.contact:not(:last-child) {
+  margin-right: 50px;
 }
 
 .contact-icon {
@@ -92,28 +117,11 @@ ul {
   align-items: center;
 }
 
-.adres {
-  display: flex;
-  margin-left: auto;
-}
 .header .container {
   display: flex;
   align-items: center;
 }
 
-.contact {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-
-.contact:hover,
-.contact:focus {
-  fill: #2196f3;
-}
-.contact:not(:last-child) {
-  margin-right: 50px;
-}
 .logo {
   margin-right: 93px;
 }
@@ -127,12 +135,7 @@ ul {
   font-size: 14px;
   line-height: 1.1;
 }
-.adres {
-  color: var(--primary-text-color);
-}
-.adres-icon {
-  display: flex;
-}
+
 .accent-logo {
   color: var(--accent-color);
 }
@@ -367,10 +370,10 @@ ul {
   fill: #2196f3;
 }
 
-.regular-customers-link:hover .regular-customers-item,
-.regular-customers-link:focus .regular-customers-item {
-  fill: #2196f3;
+.regular-customers-item:hover {
+  border: 1px solid #2196f3;
 }
+
 .footer {
   background: #2f303a;
   padding-top: 60px;
@@ -403,6 +406,62 @@ ul {
   color: var(--accent-color);
 }
 
+.footer .container {
+  display: flex;
+}
+
+.join {
+  display: block;
+  margin-left: 156px;
+  margin-top: 32px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.join-title {
+  margin-bottom: 20px;
+}
+
+.footer-soc-list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+
+  padding-right: 32px;
+}
+
+.footer-soc-item {
+  width: 44px;
+  height: 44px;
+}
+
+.footer-soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.footer-soc-icon {
+  fill: #afb1b8;
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background: #2196f3;
+}
+.footer-soc-link:hover .footer-soc-icon,
+.footer-soc-link:focus .footer-soc-icon {
+  fill: #ffffff;
+}
 /*Портфоліо*/
 
 .header {
@@ -455,6 +514,10 @@ ul {
   margin-bottom: 0;
 }
 
+.element:hover,
+.element:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 .subject {
   color: var(--title-text-color);
   font-weight: 700;
