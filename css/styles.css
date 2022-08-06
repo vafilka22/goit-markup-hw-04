@@ -109,6 +109,7 @@ ul {
 }
 
 .contact-icon {
+  display: inline;
   margin-right: 10px;
 }
 
