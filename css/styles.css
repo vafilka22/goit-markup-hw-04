@@ -77,14 +77,20 @@ ul {
   color: var(--primary-text-color);
 }
 
-.adres-icon {
-  display: flex;
-}
-
-.adres .link {
+.adres {
   display: flex;
   color: inherit;
   align-items: center;
+}
+
+.adres-link:hover,
+.adres-link:focus {
+  color: #2196f3;
+}
+
+.contact-icon:hover,
+.contact-icon:focus {
+  fill: #2196f3;
 }
 
 .contacts {
@@ -96,11 +102,6 @@ ul {
   flex-direction: row-reverse;
   align-items: center;
   /* align-self: baseline; */
-}
-
-.adres .link:hover .contact-icon,
-.adres .link:focus .contact-icon {
-  fill: #2196f3;
 }
 
 .contact:not(:last-child) {
