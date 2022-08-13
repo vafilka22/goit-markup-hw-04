@@ -96,7 +96,6 @@ img {
 
 .adres-link {
   display: flex;
-  align-items: center;
 }
 
 .contact:not(:last-child) {
