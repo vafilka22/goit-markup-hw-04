@@ -16,6 +16,7 @@ body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
 }
 
 a {
@@ -72,6 +73,10 @@ img {
   padding-bottom: 24px;
 }
 
+.site-nav {
+  display: flex;
+  letter-spacing: 0.02em;
+}
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
@@ -82,6 +87,7 @@ img {
   margin-left: auto;
   align-items: center;
   color: #757575;
+  letter-spacing: 0.02em;
 }
 
 .link-contact {
@@ -108,9 +114,8 @@ img {
 
 .contacts {
   display: flex;
-}
-.site-nav {
-  display: flex;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .header-nav {
@@ -189,19 +194,43 @@ img {
   margin-right: auto;
 }
 
+.button::before,
+.button::after {
+  content: "";
+  width: 216px;
+  height: 50px;
+}
+
+.button:hover,
+.button:focus {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.button:hover::after {
+  display: block;
+}
 /* характеристики */
 
 .basic-list {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1* var(--card-set-gap))
+  margin-top: calc(-1* var(--card-set-gap))
 }
+
+.basic-list > .basic-item {
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+}
+
 .basic-item {
   max-width: 270px;
-
   border-radius: 4px;
 }
-.basic-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .basic-icon {
   display: flex;
   height: 120px;
@@ -217,13 +246,28 @@ img {
   color: var(--title-text-color);
   text-transform: uppercase;
   margin-bottom: 10px;
-}
+} 
+
 .text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
 }
 /* робота */
+
+.our-work{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1* var(--card-set-gap))
+  margin-top: calc(-1* var(--card-set-gap))
+}
+
+.our-work > .works{
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+}
+
 .work-section-pading {
   padding-bottom: 94px;
 }
@@ -237,23 +281,22 @@ img {
   color: var(--title-text-color);
   margin-bottom: 50px;
 }
-.our-work {
-  display: flex;
-  max-width: 100%;
-}
 
-.works:not(:last-child) {
-  margin-right: 30px;
-}
 
 /* команда */
 .team {
   display: flex;
+  flex-wrap: wrap;
   background-color: #f5f4fa;
+  margin-left: calc(-1* var(--card-set-gap))
+  margin-top: calc(-1* var(--card-set-gap))
+  
 }
 
-.team-list:not(:last-child) {
-  margin-right: 30px;
+.team > .team-list{
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
 
 .team-list {
@@ -346,12 +389,18 @@ img {
 }
 
 .regular-customers-list {
-  display: flex;
-  align-items: center;
+  display: flex; 
+  margin-left: calc(-1* var(--card-set-gap))
+  margin-top: calc(-1* var(--card-set-gap))
 }
-.regular-customers-item {
-  margin-left: 30px;
+
+.regular-customers-list > .regular-customers-item{
+  flex-basis: calc(100% / 6 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
 }
+
+
 
 .regular-customers-icon {
   fill: #afb1b8;
@@ -521,11 +570,20 @@ img {
 }
 
 .name-picture {
-  padding: 24px;
+  padding: 24px 20px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #eeeeee;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #eeeeee;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #eeeeee;
 }
 
 .text-subject {
-  margin-top: 20px;
+  margin-top: 4px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.8;
@@ -546,9 +604,5 @@ img {
 
 .shadow {
   display: block;
-  width: 370px;
   margin: auto;
-}
-.element {
-  outline: 1px solid #eeeeee;
 }
